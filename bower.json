@@ -1,0 +1,20 @@
+{
+  "name": "BookmarkApp",
+  "version": "1.0.0",
+  "homepage": "https://github.com/SathishGajendran/BookmarkApp",
+  "description": "Bookmark Application",
+  "keywords": [
+    "bookmark"
+  ],
+  "authors": [
+    "Sathish G(sathish.gajendran@gmail.com)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "requirejs": "~2.1.18",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.1",
+    "bootstrap": "~3.3.5"
+  }
+}
