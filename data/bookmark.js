@@ -6,7 +6,13 @@ var Bookmark=DB.model('Bookmark',schema);
 
 module.exports={
     getAllBookmarks:function(args,callback){
-        Bookmark.find(function(err,res){
+//        Bookmark.aggregate([
+//            {$group:{_id:'$localPath'}},
+//            {$project:{localPath:'$_id',_id:0}}
+//        ]).exec(function(err,res){
+//               console.log(res);
+//            });
+        Bookmark.find({localPath:args.localPath},function(err,res){
             callback(err,res);
         });
     },
@@ -14,6 +20,7 @@ module.exports={
         var newBookmark=new Bookmark({
             title:args.title,
             url:args.url,
+            localPath:args.localPath,
             created_date:new Date()
         });
         newBookmark.save(function(err,res){
@@ -27,7 +34,7 @@ module.exports={
     },
     removeBookmark:function(id,callback){
         Bookmark.remove({_id:id},function(err,res){
-           callback(err,res);
+           callback(err,{res:res});
         });
     }
 };

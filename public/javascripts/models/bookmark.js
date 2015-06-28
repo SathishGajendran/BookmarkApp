@@ -6,10 +6,11 @@ define([
 ],function(Backbone,_,$){
     var bookmark=Backbone.Model.extend({
         urlRoot:'bookmarks',
-        idAttribute:'_id',
+        idAttribute:'id',
         defaults:{
             title:'',
             url:'',
+            localPath:'',
             created_date:''
         }
     });
