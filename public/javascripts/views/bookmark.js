@@ -2,7 +2,7 @@ define([
     'backbone',
     'underscore',
     'jQuery',
-    'javascripts/templates/bookmark',
+    'text!javascripts/templates/bookmark.html',
     'javascripts/models/bookmark',
     'javascripts/collections/bookmark'
 ],function(Backbone,_,$,BookmarkTemplate,BookmarkModel,BookmarkCollection){
